@@ -1,0 +1,180 @@
+:root {
+  --siva: rgb(226, 226, 226);
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
+}
+
+body {
+  background-image: url("slike/image.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  transition: all 0.5s ease;
+}
+
+/*width > 600*/
+@media screen and (min-width: 601px) {
+  div.naslov {
+    font-size: 100px;
+  }
+}
+/*width <= 600*/
+@media screen and(max-width: 600px) {
+  div.naslov {
+    font-size: 40px;
+  }
+}
+
+.naslov {
+  margin-top: 12.7vh;
+  margin-left: 8.1699vw;
+}
+
+.navigationSideBar {
+  position: absolute;
+  align-items: center;
+  right: 0;
+  top: 0;
+  min-height: 20vh;
+  margin-right: 0;
+  padding-right: 100px;
+}
+
+.temp {
+  position: absolute;
+  top: 3vh;
+  right: 0;
+  display: inline-block;
+  width: 6vw;
+  height: 2vh;
+}
+
+.linija {
+  z-index: 2;
+  background-color: var(--black);
+  max-width: 100px;
+  min-height: 0.5vh;
+  margin-bottom: 5px;
+  border-radius: 100px;
+}
+
+@keyframes prelazSidebar {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 20%;
+  }
+  50% {
+    opacity: 30%;
+  }
+  75% {
+    opacity: 40%;
+  }
+  100% {
+    opacity: 60%;
+  }
+}
+
+.sidebar {
+  max-width: 1000px;
+  width: 20vw;
+  min-height: 100vh;
+  display: none;
+  position: absolute;
+  background-color: var(--siva);
+  opacity: 60%;
+  top: 0;
+  right: 0;
+  padding-top: 5vh;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.temp:hover .linija {
+  display: none;
+}
+
+.temp:hover {
+  top: 0;
+}
+
+.temp:hover .lista {
+  display: inline-block;
+}
+
+.temp:hover .sidebar {
+  display: block;
+  animation-name: prelazSidebar;
+  animation-duration: 0.3s;
+}
+
+.dugmeLista {
+  padding: 0px;
+  width: 100%;
+  min-height: 5vh;
+  background-color: var(--siva);
+  border: none;
+}
+
+.lista {
+  position: relative;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+  z-index: 3;
+  opacity: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.lista li {
+  right: 0;
+  opacity: 100%;
+  position: relative;
+  padding: 0px;
+  background-color: var(--siva);
+}
+.lista li:hover .dugmeLista {
+  background-color: var(--white);
+}
+
+.razmak {
+  background-color: var(--siva);
+  opacity: 50%;
+}
+
+.slika {
+  position: fixed;
+  left: 0;
+  margin-top: 12.7vh;
+  margin-left: 8.1699vw;
+  position: relative;
+}
+
+.tekst {
+  margin-left: 5vw;
+  width: 70vw;
+}
+.tekst h2 {
+  padding-bottom: 20px;
+}
+
+#slikaONama {
+  max-width: 30vw;
+  align-self: center;
+}
+
+.slikaOsoba {
+  max-width: 120px;
+  min-height: 150px;
+}

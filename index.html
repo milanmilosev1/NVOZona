@@ -11,79 +11,36 @@
     href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet"
   />
+  <script src="index.js"></script>
 </head>
 <body>
-  <div class="mainContainer">
-    <div class="navigationSideBar">
-      <div class="temp">
-        <div class="linija"></div>
-        <div class="linija"></div>
-        <div class="linija"></div>
-
-        <nav class="sidebar">
-          <ul class="lista">
-            <li>
-              <a href="#">
-                <button class="dugmeLista">
-                  <p class="dugmeText">&#11166; O nama</p>
-                </button></a
-              >
-            </li>
-            <div class="razmak"></div>
-
-            <li>
-              <a href="#">
-                <button class="dugmeLista">
-                  <p>&#11166; Naš tim</p>
-                </button></a
-              >
-            </li>
-            <div class="razmak"></div>
-
-            <li>
-              <a href="#">
-                <button class="dugmeLista">
-                  <p>&#11166; Naš cilj</p>
-                </button></a
-              >
-            </li>
-            <div class="razmak"></div>
-
-            <li>
-              <a href="#">
-                <button class="dugmeLista">
-                  <p>&#11166; Naše akcije</p>
-                </button></a
-              >
-            </li>
-            <div class="razmak"></div>
-
-            <li>
-              <a href="#">
-                <button class="dugmeLista">
-                  <p>&#11166; Galerija</p>
-                </button></a
-              >
-            </li>
-            <li>
-              <a href="#">
-                <button class="dugmeLista">
-                  <p>&#11166; Kontakt</p>
-                </button></a
-              >
-            </li>
-            <div class="razmak"></div>
-          </ul>
-        </nav>
-      </div>
-    </div>
+  <div class="navigationBar">
+    <ul class="navBarItem">
+      <li>
+        <a href=""><button>O nama</button></a>
+      </li>
+      <li>
+        <a href=""><button>Naš tim</button></a>
+      </li>
+      <li>
+        <a href=""><button>Naš cilj</button></a>
+      </li>
+      <li>
+        <a href=""><button>Naše akcije</button></a>
+      </li>
+      <li>
+        <a href=""><button>Galerija</button></a>
+      </li>
+      <li>
+        <a href=""><button>Kontakt</button></a>
+      </li>
+    </ul>
+  </div>
+  <div class="naslovSlika">
+    <img src="slike/slika o nama.png" alt="A" />
   </div>
 
-  <div class="naslov">
-    <h1>ZONA</h1>
-  </div>
-
-  <div class="slika"><img src="" alt="A" /></div>
+  <div class="RETARDTRISTO300"></div>
 
   <div class="tekst">
     <h2>O nama / About us</h2>
@@ -97,7 +54,7 @@
       očuvanja životne sredine, aktivizma, aktivnog gradjanstva, socijalnog i
       ekonomskog održivog razvoja.
     </p>
-    <img id="slikaONama" src="slike/slika o nama.png" alt="A" />
+    <img id="slikaONama" src="" alt="A" />
   </div>
 
   <div class="tekst">
@@ -129,12 +86,12 @@
         </p>
       </div>
       <div class="osobaContainer" id="jana">
-        <h3>Jana Srdanov</h3>
+        <h3 style="float: right">Jana Srdanov</h3>
         <img
           class="slikaOsoba"
           src="slike/jana.png"
           alt="B"
-          style="float: left; padding-right: 3px"
+          style="float: right; padding-right: 3px"
         />
         <p class="tekstOsoba">
           &emsp; Ćao svima, ja sam Jana Srdanov. Iz Zrenjanina sam, gde sam dve
@@ -184,16 +141,52 @@
     </p>
 
     <ol>
-      <li>Uvod u održivi razvoj</li>
-      <div class="tekstProjekat"><p></p></div>
-      <li>Klimatske promene</li>
-      <div class="tekstProjekat"><p></p></div>
-      <li>Prehrambeni održivi razvoj</li>
-      <div class="tekstProjekat"><p></p></div>
-      <li>Održivi razvoj u modnoj industriji</li>
-      <div class="tekstProjekat"><p></p></div>
-      <li>Aktivizam</li>
-      <div class="tekstProjekat"><p></p></div>
+      <li>
+        Uvod u održivi razvoj<span class="trougaoShowMore">&#11208;</span>
+      </li>
+      <div class="tekstProjekat">
+        <p>
+          pokriva rečnik koji se odnosi na održivost, koncepte održivog razvoja,
+          vodeće organizacije i inicijative, globalne probleme, elementarne
+          mehanizme itd.
+        </p>
+      </div>
+      <li>Klimatske promene<span class="trougaoShowMore">&#11208;</span></li>
+      <div class="tekstProjekat">
+        <p>
+          pokriva globalno zagrevanje, ekološki otisak, vreme i klimu, efekat
+          staklene bašte, emisije gasova, posledice itd.
+        </p>
+      </div>
+      <li>
+        Prehrambeni održivi razvoj<span class="trougaoShowMore">&#11208;</span>
+      </li>
+      <div class="tekstProjekat">
+        <p>
+          pokriva proizvodnju hrane, poljoprivrednu industriju, ekološke i
+          društvene uticaje savremene proizvodnje hrane, reciklažu otpada i
+          petlja u reciklazi hrane itd.
+        </p>
+      </div>
+      <li>
+        Održivi razvoj u modnoj industriji<span class="trougaoShowMore"
+          >&#11208;</span
+        >
+      </li>
+      <div class="tekstProjekat">
+        <p>
+          pokriva brzu modu, eksploatisanje u fabrikama, neokolonijalizam,
+          konzumerizam, kapitalizam itd.
+        </p>
+      </div>
+      <li>Aktivizam <span id="trougaoShowMore">&#11208;</span></li>
+      <div class="tekstProjekat">
+        <p>
+          pokriva prostore, lica i nivoe moći, šta je aktivizam, ko je
+          aktivista, proteste, uspešne akcije, poente aktivističkih intervencija
+          itd.
+        </p>
+      </div>
     </ol>
     <p class="tekstOsoba">
       Radionice u sklopu projekta vode i facilitiraju srednjoškolci i studenti
@@ -211,6 +204,30 @@
       ćemo proširiti informacije među svim građanima i napraviti dugotrajnu
       promenu.
     </p>
+    <div id="uvodniDeoRadionica">
+      <p>
+        Uvodni deo radionica trajaće izmedju 20 i 30 minuta. Za to vreme,
+        gostujuća predavačica uvodi učesnike u temu radionice. Ostatak vremena
+        posvećen je aktivnostima kroz koje se dalje diskutuje i istražuje o
+        temi.
+      </p>
+      <p>
+        Radionice u sklopu projekta vode i facilitiraju srednjoškolci i studenti
+        koji se duže vreme angažuju u ovoj oblasti kroz rad i volonterizam. Same
+        radionice dele se na uvodni deo, koji se sastoji od predavanja u toku
+        kog učesnici imaju priliku da se upoznaju sa osnovnim konceptima i
+        vokabularom vezanim za temu radionice, i na interaktivni deo u kom se
+        dalje diskutuje i kroz različite aktivnosti dalje istražuje ta tema.
+        Tokom ovih radionica, polaznici će biti podstaknuti da vežbaju javni
+        govor, debatu i pristup dijalogu i time unaprede svoje opšte veštine
+        razgovora koje bi ih pripremile za aktivno učešće i dalje diskusije.
+        Sprovođenjem ovog projekta planirano je da se postigne bolje razumevanje
+        teme održivog razvoja među mladima u našoj lokalnoj zajednici, kao i da
+        sei motivišu da nastave da uče i učestvuju u ovoj i oblastima poput ove.
+        Radeći ovo, nadamo se da ćemo proširiti informacije među svim građanima
+        i napraviti dugotrajnu promenu.
+      </p>
+    </div>
     <img src="" alt="C" />
   </div>
 </body>

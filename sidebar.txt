@@ -1,0 +1,65 @@
+  <div class="mainContainer">
+    <div class="navigationSideBar">
+      <div class="temp">
+        <div class="linija"></div>
+        <div class="linija"></div>
+        <div class="linija"></div>
+
+        <nav class="sidebar">
+          <ul class="lista">
+            <li>
+              <a href="#">
+                <button class="dugmeLista">
+                  <p class="dugmeText">&#11166; O nama</p>
+                </button></a
+              >
+            </li>
+            <div class="razmak"></div>
+
+            <li>
+              <a href="#">
+                <button class="dugmeLista">
+                  <p>&#11166; Naš tim</p>
+                </button></a
+              >
+            </li>
+            <div class="razmak"></div>
+
+            <li>
+              <a href="#">
+                <button class="dugmeLista">
+                  <p>&#11166; Naš cilj</p>
+                </button></a
+              >
+            </li>
+            <div class="razmak"></div>
+
+            <li>
+              <a href="#">
+                <button class="dugmeLista">
+                  <p>&#11166; Naše akcije</p>
+                </button></a
+              >
+            </li>
+            <div class="razmak"></div>
+
+            <li>
+              <a href="#">
+                <button class="dugmeLista">
+                  <p>&#11166; Galerija</p>
+                </button></a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <button class="dugmeLista">
+                  <p>&#11166; Kontakt</p>
+                </button></a
+              >
+            </li>
+            <div class="razmak"></div>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>

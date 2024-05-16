@@ -12,7 +12,6 @@
 }
 
 body {
-  background-image: url("slike/image.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -32,149 +31,131 @@ body {
   }
 }
 
-.naslov {
-  margin-top: 12.7vh;
-  margin-left: 8.1699vw;
-}
-
-.navigationSideBar {
-  position: absolute;
-  align-items: center;
-  right: 0;
-  top: 0;
-  min-height: 20vh;
-  margin-right: 0;
-  padding-right: 100px;
-}
-
-.temp {
-  position: absolute;
-  top: 3vh;
-  right: 0;
-  display: inline-block;
-  width: 6vw;
-  height: 2vh;
-}
-
-.linija {
-  z-index: 2;
-  background-color: var(--black);
-  max-width: 100px;
-  min-height: 0.5vh;
-  margin-bottom: 5px;
-  border-radius: 100px;
-}
-
-@keyframes prelazSidebar {
-  0% {
-    opacity: 0%;
-  }
-  25% {
-    opacity: 20%;
-  }
-  50% {
-    opacity: 30%;
-  }
-  75% {
-    opacity: 40%;
-  }
-  100% {
-    opacity: 60%;
+@media screen and(min-height: 1080px) {
+  div.tekst {
+    padding-top: 100px;
   }
 }
 
-.sidebar {
-  max-width: 1000px;
-  width: 20vw;
-  min-height: 100vh;
-  display: none;
-  position: absolute;
-  background-color: var(--siva);
-  opacity: 60%;
-  top: 0;
-  right: 0;
-  padding-top: 5vh;
-  z-index: 1;
-  transition: all 0.5s ease;
+@media screen and(max-height: 1079px) {
+  div.tekst {
+    padding-top: 50px;
+  }
 }
-
-.temp:hover .linija {
-  display: none;
-}
-
-.temp:hover {
-  top: 0;
-}
-
-.temp:hover .lista {
-  display: inline-block;
-}
-
-.temp:hover .sidebar {
-  display: block;
-  animation-name: prelazSidebar;
-  animation-duration: 0.3s;
-}
-
-.dugmeLista {
-  padding: 0px;
+.navBarItem {
+  height: 50px;
   width: 100%;
-  min-height: 5vh;
+  background-color: var(--black);
+}
+
+.navBarItem li {
+  display: inline-grid;
+  height: 100%;
+  float: left;
+}
+.navBarItem li button {
+  padding: 5px;
   background-color: var(--siva);
+  width: auto;
+  height: 100%;
   border: none;
 }
 
-.lista {
-  position: relative;
-  top: 10px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  display: none;
-  z-index: 3;
-  opacity: 100%;
-  list-style: none;
-  padding: 0;
+.navBarItem li button a {
+  background-color: var(--black);
 }
 
-.lista li {
-  right: 0;
-  opacity: 100%;
-  position: relative;
-  padding: 0px;
-  background-color: var(--siva);
-}
-.lista li:hover .dugmeLista {
+.navBarItem li button:hover {
   background-color: var(--white);
 }
-
-.razmak {
-  background-color: var(--siva);
-  opacity: 50%;
+a {
+  text-decoration: none;
+}
+a:visited {
+  background-color: var(--black);
 }
 
-.slika {
-  position: fixed;
-  left: 0;
-  margin-top: 12.7vh;
-  margin-left: 8.1699vw;
-  position: relative;
+.navigationBar {
+  padding: 0;
+  width: 100%;
+  display: grid;
+}
+
+.naslovSlika {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.naslovSlika img {
+  width: 50vw;
+  height: auto;
+}
+
+.RETARDTRISTO300 {
+  margin: auto;
+  width: 80vw;
+  height: 2vh;
+  background-color: var(--black);
 }
 
 .tekst {
-  margin-left: 5vw;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   width: 70vw;
 }
+
+.tekst p {
+  font-size: 18pt;
+}
+
 .tekst h2 {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 28pt;
   padding-bottom: 20px;
 }
 
-#slikaONama {
-  max-width: 30vw;
-  align-self: center;
+.tekst ol {
+  padding-left: 20px;
+}
+
+.tekst ol li {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 18pt;
+}
+
+.tekstProjekat {
+  display: none;
 }
 
 .slikaOsoba {
   max-width: 120px;
   min-height: 150px;
+}
+
+/*nas Tim grid*/
+.gridDivZene {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+}
+
+.osobaContainer h3 {
+  font-size: 24pt;
+}
+
+#miona,
+#jana,
+#ana {
+  grid-column: 1;
+}
+#jana {
+  float: right;
 }

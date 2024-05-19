@@ -1,84 +1,153 @@
+.montserrat-asd {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
   --siva: rgb(226, 226, 226);
   --black: rgb(0, 0, 0);
   --white: rgb(255, 255, 255);
 }
 
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+a:visited {
+  color: var(--black);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Archivo", sans-serif;
 }
 
 body {
+  background-image: url("slike/colorsjpg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
   transition: all 0.5s ease;
 }
 
-/*width > 600*/
-@media screen and (min-width: 601px) {
-  div.naslov {
-    font-size: 100px;
-  }
+[class*="col-"] {
+  width: 100%;
 }
-/*width <= 600*/
-@media screen and(max-width: 600px) {
-  div.naslov {
+
+@media only screen and (max-width: 767px) {
+  .naslov {
     font-size: 40px;
   }
-}
-
-@media screen and(min-height: 1080px) {
-  div.tekst {
-    padding-top: 100px;
+  #navBarItem {
+    height: 3vh;
+    font-size: 10px;
+    border: 1px solid black;
+  }
+  .slikaGlavna {
+    max-height: 50px;
+  }
+  .uvodniDeoRadionica,
+  .zonaTekst,
+  .tekstProjekat {
+    font-size: 10px;
   }
 }
 
-@media screen and(max-height: 1079px) {
-  div.tekst {
-    padding-top: 50px;
+@media only screen and (min-width: 768px) {
+  .naslov {
+    font-size: 80px;
+  }
+  #navBarItem {
+    font-size: 25px;
+    height: auto;
+  }
+  .slikaGlavna {
+    max-height: 120px;
+    width: auto;
+  }
+  .uvodniDeoRadionica,
+  .zonaTekst,
+  .tekstProjekat {
+    font-size: 20px;
+  }
+  .osobaContainer h3 {
+    font-size: 25px;
   }
 }
-.navBarItem {
-  height: 50px;
+
+.kolona {
+  width: 80vw;
+  margin: 0px auto;
+}
+.gornji_navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo {
+  flex-grow: 1;
+  display: inline;
+  padding-bottom: 0px;
+}
+.insta {
+  flex-grow: 1;
+  padding-top: 0.2vh;
+}
+.insta img {
+  float: right;
+  padding: 0px;
+}
+.insta p {
+  margin-top: 15px;
+}
+.jezik {
+  padding: 0px;
+  flex-grow: 1;
+}
+.kontakt {
+  flex-grow: 1;
+}
+#engl {
+  width: 40px;
+  height: 25px;
+}
+#srbija {
+  width: 40px;
+  height: 25px;
+}
+#navBarItem {
+  text-align: center;
+  border: none;
   width: 100%;
   background-color: var(--black);
+  display: flex;
 }
-
-.navBarItem li {
-  display: inline-grid;
-  height: 100%;
-  float: left;
-}
-.navBarItem li button {
-  padding: 5px;
+#navBarItem a {
+  text-align: center;
+  border: none;
+  flex-grow: 1;
   background-color: var(--siva);
   width: auto;
-  height: 100%;
-  border: none;
+  transition: 300ms;
 }
 
-.navBarItem li button a {
-  background-color: var(--black);
-}
-
-.navBarItem li button:hover {
+#navBarItem a:hover {
   background-color: var(--white);
 }
-a {
-  text-decoration: none;
-}
-a:visited {
-  background-color: var(--black);
-}
 
-.navigationBar {
+#navigationBar {
   padding: 0;
-  width: 100%;
-  display: grid;
+  display: flex;
+  margin: 0px auto;
 }
 
 .naslovSlika {
@@ -94,48 +163,47 @@ a:visited {
   height: auto;
 }
 
-.RETARDTRISTO300 {
-  margin: auto;
-  width: 80vw;
-  height: 2vh;
-  background-color: var(--black);
+.naslov {
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .tekst {
   max-width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  width: 70vw;
-}
-
-.tekst p {
-  font-size: 18pt;
+  width: 75vw;
 }
 
 .tekst h2 {
   padding-top: 100px;
   text-align: center;
-  font-size: 28pt;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .tekst ol {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .tekst ol li {
   padding-left: 10px;
   padding-top: 10px;
-  font-size: 18pt;
 }
 
-.tekstProjekat {
+.projekat {
   display: none;
 }
-
+.tekstProjekat {
+  flex-grow: 1;
+}
+.mapa {
+  flex-grow: 1;
+}
 .slikaOsoba {
-  max-width: 120px;
-  min-height: 150px;
+  max-width: 150px;
+  min-height: 200px;
 }
 
 /*nas Tim grid*/
@@ -147,8 +215,12 @@ a:visited {
   justify-content: center;
 }
 
-.osobaContainer h3 {
-  font-size: 24pt;
+.osobaContainer {
+  text-align: center;
+}
+
+.osobaContainer img {
+  padding: 5px;
 }
 
 #miona,
@@ -156,6 +228,50 @@ a:visited {
 #ana {
   grid-column: 1;
 }
-#jana {
+
+#miona,
+#ana {
+  text-align: left;
+}
+
+#jana h3 {
+  text-align: end;
+}
+#jana img {
+  top: 0;
   float: right;
+}
+#miona .slikaOsoba {
+  max-width: 200px;
+  min-height: 240px;
+}
+
+.uvodniDeoRadionica {
+  padding-top: 15px;
+}
+
+.backToTop {
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.backToTopButton {
+  color: #ffffff;
+  background-color: #2dc868;
+  font-size: 19px;
+  border: none;
+  border-radius: 100px;
+  padding: 15px 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 300ms;
+}
+.backToTopButton:hover {
+  color: #2dc868;
+  background-color: #ffffff;
+}
+
+.strelica:hover {
+  cursor: pointer;
 }

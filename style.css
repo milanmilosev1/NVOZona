@@ -115,6 +115,7 @@ body {
 }
 .kontakt {
   flex-grow: 1;
+  text-align: center;
 }
 #engl {
   width: 40px;
